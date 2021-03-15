@@ -5,7 +5,9 @@ from app.models.player import Player
 from app.models.game import Game
 
 @app.route('/')
-
+def home():
+    return render_template(
+        'index.html',)
 
 @app.route('/<choice_1>/<choice_2>')
 def play_the_game(choice_1, choice_2):
@@ -15,4 +17,3 @@ def play_the_game(choice_1, choice_2):
     winner = game.play_game(choice_1, choice_2)
     return f"Player 1 chose: {choice_1} Player 2 chose: {choice_2} . So, the result is... {winner}"
 
-@app.route
