@@ -2,21 +2,20 @@ class Game():
     def __init__(self, player_1, player_2):
         self.player_1 = player_1
         self.player_2 = player_2
+  
 
-    def play_game(self, choice_1, choice_2):
-        if choice_1 == choice_2:
-            return "a draw..."
-        elif choice_1 == "rock" and choice_2 == "scissors":
-                return "Player 1 wins!"
-        elif choice_1 == "rock" and choice_2 == "paper":
-                return "Player 2 wins!"
-        elif choice_1 == "scissors" and choice_2 == "rock":
-                return "Player 2 wins!"
-        elif choice_1 == "scissors" and choice_2 == "paper":
-                return "Player 1 wins!"
-        elif choice_1 == "paper" and choice_2 == "scissors":
-                return "Player 2 wins!"   
-        elif choice_1 == "paper" and choice_2 == "rock":
-                return "Player 1 wins!"   
+    def play_game(self, player_1_choice, player_2_choice):
+        winner = "player 2"
+
+        if player_1_choice == player_2_choice:
+            winner = "draw"
+        if player_1_choice == "rock" and player_2_choice == "scissors":
+            winner = "player 1"
+        if player_1_choice == "scissors" and player_2_choice == "paper":
+            winner = "player 1"
+        if player_1_choice == "paper" and player_2_choice == "rock":
+            winner = "player 1"
+
+        return winner
         
 

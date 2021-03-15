@@ -30,3 +30,9 @@ p {
     color: white;
     text-decoration: wavy;
 }
+
+h3 {
+    color: goldenrod;
+    font-size: 30px;
+    text-align: center;
+}
